@@ -17,13 +17,14 @@ const Navbar = () => {
             className='object-contain'
             ></Image>
             </Link>
-        </nav>
-        <CustomButton 
+            <CustomButton 
         title="Sign In"
         btnType="button"
         containerStyles='text-primary-blue rounded-full bg-white min-w-[130px]'>
 
         </CustomButton>
+        </nav>
+        
 
 
     </header>
