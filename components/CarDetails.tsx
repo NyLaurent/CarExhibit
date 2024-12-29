@@ -29,6 +29,7 @@ const CarDetails = ({isOpen,closeModal,car}:CarDetailsProps) => {
             >
                 <div className='fixed inset-0 bg-black bg-opacity-25'/>
             </Transition.Child>
+            <div></div>
 
         </Dialog>
 
