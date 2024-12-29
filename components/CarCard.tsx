@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { CarProps } from '@/types'
 import CustomButton from './CustomButton'
 import { calculateCarRent } from '@/utils'
+import { CarDetails } from '.'
 
 
 interface CarCardProps{
@@ -94,7 +95,10 @@ const CarCard = ({car}:CarCardProps) => {
 
        
         </div>
-        {/* <CarDetails></CarDetails> */}
+        <CarDetails
+        isOpen={isOPen}
+        closeModal={()=> setIsOpen(false)}
+        car={car}/>
       
     </div>
   )
