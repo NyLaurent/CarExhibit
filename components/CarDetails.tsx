@@ -46,7 +46,7 @@ const CarDetails = ({isOpen,closeModal,car}:CarDetailsProps) => {
                 max-w-lg max-h-[90vh] overflow-y-auto
                 transform rounded-2xl bg-white text-left
                  shadow-xsl transition-all flex flex-col
-                 gap-5'>
+                 gap-5 p-6'>
                     <button
                     type='button'
                     className='absolute top-2 right-2 z-10
@@ -108,7 +108,7 @@ const CarDetails = ({isOpen,closeModal,car}:CarDetailsProps) => {
                                 <div className='flex justify-between
                                 gap-5 w-full text-right' key={key}>
                                     <h4 className='text-grey capitalize'>{key.split("_").join(" ")}</h4>
-                                    <p>{value}</p>
+                                    <p className='text-black-100 font-semibold'>{value}</p>
                                 </div>
 
                             ))}
