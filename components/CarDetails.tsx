@@ -45,7 +45,7 @@ const CarDetails = ({isOpen,closeModal,car}:CarDetailsProps) => {
                 <Dialog.Panel className='relative w-full
                 max-w-lg max-h-[90vh] overflow-y-auto
                 transform rounded-2xl bg-white text-left
-                 shadow-xsl transition-all flex flex-col
+                 shadow-xl transition-all flex flex-col
                  gap-5 p-6'>
                     <button
                     type='button'
