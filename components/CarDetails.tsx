@@ -5,6 +5,8 @@ import { CarProps } from '@/types';
 import Image from 'next/image';
 import React, { Fragment } from 'react'
 import { Dialog,Transition } from '@headlessui/react';
+import { generateCarImageUrl } from '@/utils';
+import { url } from 'inspector';
 interface CarDetailsProps{
     isOpen:boolean;
     closeModal:()=>void;
@@ -63,7 +65,7 @@ const CarDetails = ({isOpen,closeModal,car}:CarDetailsProps) => {
                         <div className='relative w-full h-40 bg-pattern
                         bg-cover bg-center rounded-lg'>
                             <Image
-                            src="/hero.png "
+                            src={generateCarImageUrl(car,'angle')}
                             alt=''
                             fill priority
                             className='object-contain'/>
@@ -73,7 +75,7 @@ const CarDetails = ({isOpen,closeModal,car}:CarDetailsProps) => {
                             <div className='flex-1 relative w-full h-24
                             bg-primary-blue-100 rounded-lg'>
                             <Image
-                            src="/hero.png "
+                            src={generateCarImageUrl(car,'angle')}
                             alt=''
                             fill priority
                             className='object-contain'/>
@@ -81,7 +83,7 @@ const CarDetails = ({isOpen,closeModal,car}:CarDetailsProps) => {
                             <div className='flex-1 relative w-full h-24
                             bg-primary-blue-100 rounded-lg'>
                             <Image
-                            src="/hero.png "
+                            src={generateCarImageUrl(car,'angle')}
                             alt=''
                             fill priority
                             className='object-contain'/>
@@ -89,7 +91,7 @@ const CarDetails = ({isOpen,closeModal,car}:CarDetailsProps) => {
                             <div className='flex-1 relative w-full h-24
                             bg-primary-blue-100 rounded-lg'>
                             <Image
-                            src="/hero.png "
+                           src={generateCarImageUrl(car,'angle')}
                             alt=''
                             fill priority
                             className='object-contain'/>
