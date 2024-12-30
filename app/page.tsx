@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CarCard, Hero } from "@/components";
+import { CarCard, Hero, ShowMore} from "@/components";
 import {SearchBar,CustomFilter} from "@/components";
 import { fetchCars } from "@/utils";
 import { fuels, manufacturers, yearsOfProduction } from "@/constants";
@@ -34,7 +34,7 @@ export default async function Home({ searchParams }) {
                     <SearchBar/>
                     <div className="home__filter-container">
                         <CustomFilter title="fuel" options={fuels}/>
-                        <CustomFilter title="year" options={yearsOfProduction}/>
+                        <CustomFilter title="year" options={yearsOfProduction }/>
                     </div>
 
         </div>
@@ -46,6 +46,12 @@ export default async function Home({ searchParams }) {
               <CarCard car={car}/>
             ))}
            </div>
+
+           <ShowMore
+           pageNumber={(searchParams.pageNumber || 10)/10}
+           isNext={(searchParams.limit || 10 ) >  allCars.length}
+           
+           />
           </section>
         ):(
           <div className="home__error-container">
