@@ -14,7 +14,7 @@ import { Navbar,Footer } from "@/components";
 // });
 
 export const metadata: Metadata = {
-  title: "Car ShowCase",
+  title: "Car Exhibit",
   description: "Experience the best cars in the world",
 };
 

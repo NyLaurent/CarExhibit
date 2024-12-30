@@ -4,7 +4,7 @@ import {SearchBar,CustomFilter} from "@/components";
 import { fetchCars } from "@/utils";
 import { fuels, manufacturers, yearsOfProduction } from "@/constants";
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: { searchParams: Record<string, any> }) {
     // Await searchParams if it's a promise
     const params = await searchParams;
 
